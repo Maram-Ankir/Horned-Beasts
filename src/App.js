@@ -1,25 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Main from './components/Main';
+import HornedData from './components/Data.json';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import SelectedBeast from './components/SelectedBeast';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends React.Component {
+
+  constructor(props){
+    super(props)
+    this.state={
+    selectedBeast:HornedData,
+      showModel:false
+    }
+  }
+
+  displayModal =(title)=> {
+    const selectedBeast2 = HornedData.find((item)=> {
+     if(title===item.title){
+       return item
+     }
+    })
+    this.setState ({
+      showModel:true,
+      selectedBeast:selectedBeast2
+
+    })
+  }
+closeModal=() =>{
+  this.setState ({
+    showModel:false,
+})
+}
+  render() {
+    return (
+      <div>
+        <Header />
+        <Main 
+        HornedData={HornedData}
+      displayModal={this.displayModal}
+         />
+         <SelectedBeast
+         selectedBeast={this.state.selectedBeast}
+         show={this.state.showModel}
+         close={this.closeModal}
+         />
+        <Footer />
+      </div>
+    )
+  }
 }
 
 export default App;
