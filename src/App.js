@@ -36,6 +36,7 @@ closeModal=() =>{
 })
 }
   render() {
+
     return (
       <div>
         <Header />
@@ -48,6 +49,7 @@ closeModal=() =>{
          show={this.state.showModel}
          close={this.closeModal}
          />
+
         <Footer />
       </div>
     )

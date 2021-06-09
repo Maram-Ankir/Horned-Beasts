@@ -27,8 +27,8 @@ class HornedBeast extends React.Component {
 
     render() {
         return (
-            <>
-
+           
+           <>
                 <Card style={{ width: '18rem' }} onClick={this.displayModal}>
                     <Card.Img variant="top" src={this.props.img} onClick={this.voting} />
                     <Card.Body>
@@ -36,8 +36,6 @@ class HornedBeast extends React.Component {
                         <Card.Text> {`❤️ ` + this.state.countVotes}</Card.Text>
                         <Card.Text> {this.props.description}</Card.Text>
                         <Button variant="primary">Go somewhere</Button>
-
-                      
                     </Card.Body>
                 </Card>
                 </>     
