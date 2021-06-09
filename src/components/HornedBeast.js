@@ -8,15 +8,17 @@ class HornedBeast extends React.Component {
         super(props);
         this.state = {
             countVotes: 0,
-            // show: false,
         }
     }
 
     voting = () => {
+        let value = this.state.countVotes;
+        this.setState({ 
+            countVotes: value += 1 })
       
-        this.setState({
-            countVotes: this.state.countVotes++,
-        })
+        // this.setState({
+        //     countVotes: this.state.countVotes++,
+        // })
     }
 
     displayModal = ()=>{
