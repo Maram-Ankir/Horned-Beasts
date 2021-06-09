@@ -37,7 +37,9 @@ Actual time needed to complete: 3 hours
 
 __________________________________________________________________________________________
 
-Number and name of feature: Feature #2:clickable images to vote for favorite beast.
+Number and name of feature: Feature #2: view the details of the image
+When the user clicks on an individual image
+Then the image should render larger on the screen with the description displayed.
 
 Estimate of time needed to complete: 3 hr
 
@@ -48,6 +50,20 @@ Finish time: 6 pm
 Actual time needed to complete: 4 hours
 
 _______________________________________________________________________________________________
+
+Number and name of feature: Feature #2:filtering options
+When the user clicks on one option
+Then the images should be filtered accordingly
+
+Estimate of time needed to complete: 2 hr
+
+Start time: 2 pm
+
+Finish time: 6 pm
+
+Actual time needed to complete: 4 hours
+
+________________________________________________________________________________________________
 
 # Getting Started with Create React App
 
